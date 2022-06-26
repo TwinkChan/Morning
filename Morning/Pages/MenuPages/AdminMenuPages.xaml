@@ -1,0 +1,19 @@
+﻿<Page x:Class="Morning.Pages.MenuPages.AdminMenuPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Morning.Pages.MenuPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="200"
+      Title="AdminMenuPages">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden">
+            <StackPanel>
+                <Button x:Name="UserTable" Content="Пользователи" Click="UserTable_Click" Margin="0,10"/>
+                <Button x:Name="LoginHistory" Content="История входа" Click="LoginHistory_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
