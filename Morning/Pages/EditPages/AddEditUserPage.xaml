@@ -33,7 +33,7 @@
         <TextBox Text="{Binding Name}" Grid.Column="1" MaxLength="20" Width="200" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" />
         <TextBox Text="{Binding Surname}" Grid.Column="1" MaxLength="20" Grid.Row="1" Width="200" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBox Text="{Binding Role}" Grid.Column="1" Grid.Row="2" Width="200" Height="20" x:Name="ComboRole"/>
-        <TextBox Text="{Binding Phone}" Grid.Column="1" MaxLength="11" Grid.Row="3" Width="200" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Text="{Binding Phone}" TextCompositionManager.PreviewTextInput="TextBox_PreviewTextInput" Grid.Column="1" MaxLength="11" Grid.Row="3" Width="200" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBox Text="{Binding Login}" Grid.Column="1" MaxLength="20" Grid.Row="4" Width="200" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBox Text="{Binding Password}" Grid.Column="1" MaxLength="20" Grid.Row="5" Width="200" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 

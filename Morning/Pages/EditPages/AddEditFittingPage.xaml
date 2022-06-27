@@ -5,10 +5,41 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Morning.Pages.EditPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddEditFittingPage">
+      d:DesignHeight="450"
+      Title="AddEditFittingPage" Width="423">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Артикул" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <TextBlock Text="Наименование" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="1"/>
+        <TextBlock Text="Тип" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="2"/>
+        <TextBlock Text="Вес" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="3"/>
+        <TextBlock Text="Ширина" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="4"/>
+        <TextBlock Text="Длина" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="5"/>
+        <TextBlock Text="Цена" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="6"/>
+
+        <TextBox Text="{Binding Code}" Grid.Column="1" Width="200" Height="20" MaxLength="50"/>
+        <TextBox Text="{Binding Name}" Grid.Column="2" Grid.Row="1" Width="200" Height="20" MaxLength="50"/>
+        <TextBox Text="{Binding Type}" Grid.Column="2" Grid.Row="2" Width="200" Height="20"/>
+        <TextBox Text="{Binding Weight}" Grid.Column="2" Grid.Row="3" Width="200" Height="20"/>
+        <TextBox Text="{Binding Width}" Grid.Column="2" Grid.Row="4" Width="200" Height="20"/>
+        <TextBox Text="{Binding Length}" Grid.Column="2" Grid.Row="5" Width="200" Height="20"/>
+        <TextBox Text="{Binding Price}" x:Name="TPrice" Grid.Column="2" Grid.Row="6" Width="200" Height="20"/>
+
+        <Button x:Name="SaveFitting" Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="7" Click="SaveFitting_Click"/>
     </Grid>
 </Page>

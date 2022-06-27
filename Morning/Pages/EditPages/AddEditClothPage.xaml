@@ -33,13 +33,13 @@
         <TextBlock Text="Длина" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="5"/>
         <TextBlock Text="Цена" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="6"/>
 
-        <TextBox Grid.Column="1" Width="200" Height="20" MaxLength="50"/>
-        <TextBox Grid.Column="2" Grid.Row="1" Width="200" Height="20" MaxLength="50"/>
-        <ComboBox x:Name="ComboColor" Grid.Column="2" Grid.Row="2" Width="200" Height="20"/>
-        <ComboBox x:Name="ComboCompound" Grid.Column="2" Grid.Row="3" Width="200" Height="20"/>
-        <TextBox Grid.Column="2" Grid.Row="4" Width="200" Height="20"/>
-        <TextBox Grid.Column="2" Grid.Row="5" Width="200" Height="20"/>
-        <TextBox Grid.Column="2" Grid.Row="6" Width="200" Height="20"/>
+        <TextBox Text="{Binding Code}" Grid.Column="1" Width="200" Height="20" MaxLength="50"/>
+        <TextBox Text="{Binding Name}" Grid.Column="2" Grid.Row="1" Width="200" Height="20" MaxLength="50"/>
+        <TextBox Text="{Binding Color}" Grid.Column="2" Grid.Row="2" Width="200" Height="20"/>
+        <TextBox Text="{Binding Compound}" Grid.Column="2" Grid.Row="3" Width="200" Height="20"/>
+        <TextBox Text="{Binding Width}" Grid.Column="2" Grid.Row="4" Width="200" Height="20"/>
+        <TextBox Text="{Binding Length}" Grid.Column="2" Grid.Row="5" Width="200" Height="20"/>
+        <TextBox Text="{Binding Price}" x:Name="TPrice" Grid.Column="2" Grid.Row="6" Width="200" Height="20"/>
 
         <Button x:Name="SaveCloth" Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="7" Click="SaveCloth_Click"/>
     </Grid>

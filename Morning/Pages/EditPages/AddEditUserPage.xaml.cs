@@ -47,6 +47,8 @@ namespace Morning.Pages.EditPages
                 errors.AppendLine("Выберите должность!");
             if (string.IsNullOrWhiteSpace(_currentUser.Phone))
                 errors.AppendLine("Укажите телефон!");
+            if (_currentUser.Phone.Length < 11)
+                errors.AppendLine("Укажите правильный номер!");
             if (string.IsNullOrWhiteSpace(_currentUser.Login))
                 errors.AppendLine("Укажите логин!");
             if (string.IsNullOrWhiteSpace(_currentUser.Password))
@@ -78,6 +80,12 @@ namespace Morning.Pages.EditPages
                     }
                 }
             }
+        }
+
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if(!char.IsDigit(e.Text, e.Text.Length - 1))
+                e.Handled = true;
         }
     }
 }

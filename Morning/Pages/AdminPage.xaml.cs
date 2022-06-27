@@ -1,6 +1,7 @@
 ﻿using Morning.Data;
 using Morning.Logic;
 using Morning.Pages.EditPages;
+using System.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,14 +37,14 @@ namespace Morning.Pages
 
         private void DelUser_Click(object sender, RoutedEventArgs e)
         {
-            var UserDelete = DGridUsers.SelectedItems.Cast<Users>().ToList();
+            List<Users> UserDelete = DGridUsers.SelectedItems.Cast<Users>().ToList();
 
             if(MessageBox.Show($"Вы точно хотите удалить следующие {UserDelete.Count()} элементов?", "Внимание",
                 MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    //GarmentFactoryEntities.GetContext().Users.RemoveRange(UserDelete);
+                    GarmentFactoryEntities.GetContext().Users.RemoveRange(UserDelete);
                     GarmentFactoryEntities.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
                     DGridUsers.ItemsSource = GarmentFactoryEntities.GetContext().Users.ToList();
